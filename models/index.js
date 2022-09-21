@@ -1,8 +1,8 @@
-const User = require('./user');
+const User = require('./User');
 const Journal = require('./Journal');
 const Comment = require('./Comment');
 const Image = require('./Image');
-const dbConfig = require('../db/db.config,js');
+const dbConfig = require('../db/db.config.js');
 
 
 const Sequelize = require("sequelize");
@@ -38,8 +38,6 @@ Comment.belongsTo(Journal, {foreignKey: 'post_id'});
 User.hasMany(Comment, {foreignKey: 'user_id'});
 
 Journal.hasMany(Comment, {foreignKey: 'post_id'});
-
-Image.belongsTo(Journal, {foreignKey: 'post_id'});
 
 Journal.hasMany(Image, {foreignKey: 'user_id'});
 
