@@ -1,0 +1,13 @@
+
+{{#if image.length}}
+<section>
+  <h2>Your Images</h2>
+    {{#each image as |image|}}
+      {{> home-image upload}}
+    {{/each}}
+</section>
+{{/if}}
+
+<button type="submit" class="btn"><a class="link" href="/home/new">Add New Post</a></button>
+
+<script src="/javascript/add-image.js"></script>

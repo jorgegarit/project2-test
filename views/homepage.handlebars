@@ -1,0 +1,20 @@
+<article href="CREATE JOURNAL PAGE">
+    <div class="journal card bg-light" style="width: 18rem;">
+        <img class="card-img-top img-preview" src="/assets/images/placeholder-image.jpg" alt="">
+        <div class="card-body">
+            <h2 class="card-title">A new journey...</h2>
+        </div>
+    </div>
+</article>
+
+{{#each journals}}
+<article href="/{{id}}">
+    <div class="journal card bg-light" style="width: 18rem;">
+        <img class="card-img-top img-preview" src="/assets/images/placeholder-image.jpg" alt="">
+        <div class="card-body">
+            <h2 class="card-title">{{title}}</h2>
+        </div>
+    </div>
+</article>
+{{/each}}
+
